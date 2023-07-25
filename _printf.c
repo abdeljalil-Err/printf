@@ -16,9 +16,9 @@ int _printf(const char *format, ...)
 	{'c', _printchar},
 	{'s', _printstring},
 	{'%', _printmodulo},
-	{'K', _printmodulo},
-	{'!', _printmodulo}
-	};
+	{'K', _printK},
+	{'!', _print_}
+	} ;
 
 	/*The code section :*/
 	va_start(args, format);

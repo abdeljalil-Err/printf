@@ -11,6 +11,8 @@
 /* The functions prototypes : */
 int _printf(const char *format, ...);
 int _printstring(va_list args);
+int _printK(va_list args);
+int _print_(va_list args);
 int _printmodulo(va_list args);
 int _printchar(va_list args);
 int _putchar(char a);
