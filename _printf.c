@@ -10,25 +10,27 @@
 int _printf(const char *format, ...)
 {
 	/* The variables declaration section :*/
-	int printed_char_lent = 0, i, j = 0;
+	int printed_char_lent = 0, i = 0, j = 0;
 	va_list args;
 	specifier_t specifier[] = {
 	{'c', _printchar},
 	{'s', _printstring},
-	{'%', _printmodulo}
+	{'%', _printmodulo},
+	{'K', _printmodulo},
+	{'!', _printmodulo}
 	};
 
 	/*The code section :*/
 	va_start(args, format);
-	if (!format)
+	if (!format || (format[i] == '%' && format[i + 1] == '\0'))
 	return (-1);
-	for (i = 0; format && format[i] != '\0'; i++)
+	for (; format && format[i] != '\0'; i++)
 	{
 		switch (format[i])
 		{
 			case '%':
 			i++;
-			while (j < 3)
+			while (j < 5)
 			{
 				if (format[i] == specifier[j].sp_char)
 				printed_char_lent += specifier[j].sp_print_fun(args);
