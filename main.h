@@ -22,11 +22,11 @@ int _putchar(char a);
 * @sp_char: the caracter specifier.
 * @sp_print_fun: the pointer function.
 */
-struct specifier_list
+typedef struct specifier_list
 {
 char sp_char;
 int (*sp_print_fun)(va_list);
-};
+} specifier_t;
 
 #endif /*_PRINT_FUN_H*/
 

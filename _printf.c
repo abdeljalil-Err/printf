@@ -12,14 +12,14 @@ int _printf(const char *format, ...)
 	/* The variables declaration section :*/
 	int printed_char_lent = 0, i, j = 0;
 	va_list args;
-
-	/*The code section :*/
-	va_start(args, format);
-	struct specifier_list specifier[] = {
+	specifier_t specifier[] = {
 	{'c', _printchar},
 	{'s', _printstring},
 	{'%', _printmodulo}
 	};
+
+	/*The code section :*/
+	va_start(args, format);
 	if (!format)
 	return (-1);
 	for (i = 0; format && format[i] != '\0'; i++)

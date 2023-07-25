@@ -11,6 +11,7 @@ int _printmodulo(va_list args)
 {
 	/*variables declaration section :*/
 	/*The code section :*/
+	(void) args;
 	_putchar('%');
 
 	/*The return value section :*/
