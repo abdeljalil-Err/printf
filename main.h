@@ -16,7 +16,7 @@ int _print_(va_list args);
 int _printmodulo(va_list args);
 int _printchar(va_list args);
 int _putchar(char a);
-
+int _printint(va_list args);
 /* The structers prototype : */
 
 /**

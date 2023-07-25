@@ -17,7 +17,9 @@ int _printf(const char *format, ...)
 	{'s', _printstring},
 	{'%', _printmodulo},
 	{'K', _printK},
-	{'!', _print_}
+	{'!', _print_},
+	{'i', _printint},
+	{'d', _printint}
 	};
 
 	/*The code section :*/
@@ -31,7 +33,7 @@ int _printf(const char *format, ...)
 			case '%':
 			i++;
 			j = 0;
-			while (j < 5)
+			while (j < 7)
 			{
 				if (format[i] == specifier[j].sp_char)
 				printed_char_lent += specifier[j].sp_print_fun(args);
