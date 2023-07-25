@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	{'%', _printmodulo},
 	{'K', _printK},
 	{'!', _print_}
-	} ;
+	};
 
 	/*The code section :*/
 	va_start(args, format);
