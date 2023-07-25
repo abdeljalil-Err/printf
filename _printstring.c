@@ -11,7 +11,7 @@ int _printstring(va_list args)
 {
 	/*variables declaration section :*/
 	char *string_temp;
-	int i;
+	int i = 0;
 
 	/*The code section :*/
 	string_temp = va_arg(args, char *);

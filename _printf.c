@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	/* The variables declaration section :*/
-	int printed_char_lent = 0, i = 0, j = 0;
+	int printed_char_lent = 0, i = 0, j;
 	va_list args;
 	specifier_t specifier[] = {
 	{'c', _printchar},
@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 		{
 			case '%':
 			i++;
+			j = 0;
 			while (j < 5)
 			{
 				if (format[i] == specifier[j].sp_char)
@@ -39,7 +40,7 @@ int _printf(const char *format, ...)
 			break;
 			default:
 			printed_char_lent += _putchar(format[i]);
-			continue;
+			break;
 		}
 	}
 	va_end(args);
