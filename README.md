@@ -33,6 +33,21 @@ _printchar(): print character file;
 _printstring(): print string file;
 _printmodulo(): print modulo file.
 
+#Exemples :
+1. Printing a string of character "Hello, world":
+
+	•Use : _printf("Hello, w%s");
+	•Output : Hello, world.
+2. Print a character 'c';
+
+	•Use : _putchar("I like to programming withe %c langage", c );
+	•Output : I like to programming withe c langage.
+
+3. Printing the integer number:
+
+	•Use : _printf("20 + 10 = %d", 30);
+	•Output : 20 + 10 = 30.
+
 # Team members :
 Abdeljalil Abdo and Ihssane Errajy.
 
