@@ -33,7 +33,7 @@ _printchar(): print character file;
 _printstring(): print string file;
 _printmodulo(): print modulo file.
 
-#Exemples :
+# Exemples :
 1. Printing a string of character "Hello, world":
 
 	•Use : _printf("Hello, w%s");
